@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#Simple Script to install a side project for cooldown in a userfriendly way.
+
+#installing bower as root
+sudo npm install -g bower
+#installing nodecg-cli as root
+sudo npm install -g nodecg-cli
+#making a subfolder nodecg and setting up nodecg
+mkdir nodecg
+cd nodecg
+nodecg setup
+#installing the cooldown-overlay in bundles
+cd bundles
+git clone https://github.com/GreyAragami/cooldown-overlay.git
+cat << EOF
+===============================================================================
+
+Now you can go to the nodecg directory and run nodecg like this: nodecg start 
+
+if you have any issues go to: https://github.com/GreyAragami/cooldown-overlay
+
+===============================================================================
+EOF
